@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: cineforge-api
+    runtime: node
+    repo: https://github.com/rintuchowdory/cineforge-ai
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
